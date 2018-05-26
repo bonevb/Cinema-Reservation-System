@@ -1,6 +1,7 @@
 from models import MovieModel
 
 
+
 class MovieController:
     movie = MovieModel()
 
@@ -15,3 +16,12 @@ class MovieController:
     @classmethod
     def show_all_movies(cls):
         print(cls.movie.list())
+
+    @classmethod
+    def show_movies_by_id(cls, id):
+        return MovieModel.get_movie_id(id)
+
+
+
+# print(MovieController.show_movies_by_id(1))
+# print(MovieController.show_all_movies())
