@@ -39,5 +39,5 @@ class Menu:
         else:
             raise ValueError("Wrong command.")
 
-menu = Menu()
-menu.start()
+# menu = Menu()
+# menu.start()

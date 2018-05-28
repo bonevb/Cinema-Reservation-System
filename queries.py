@@ -82,5 +82,7 @@ INSET_INTO_RESERVATIONS = '''INSERT INTO RESERVATIONS (user_id, projection_id, r
 
 
 GET_MOVIE_IN_PROJECTIONS = '''
-SELECT NAME, DATE, TIME FROM (SELECT * FROM PROJECTIONS JOIN MOVIES ON MOVIES.ID = PROJECTIONS.MOVIE_ID) WHERE MOVIE_ID=?
+SELECT ID, NAME, DATE, TIME FROM (SELECT * FROM PROJECTIONS JOIN MOVIES ON MOVIES.ID = PROJECTIONS.MOVIE_ID) WHERE MOVIE_ID=?
 '''
+# def _get_reservations(self, projection_id):
+#         return self.cursor.execute('''SELECT row, col FROM Reservations WHERE projection_id=?''', (projection_id,))

@@ -21,6 +21,10 @@ class MovieController:
     def show_movies_by_id(cls, id):
         return MovieModel.get_movie_id(id)
 
+    @classmethod
+    def show_projections(cls, id):
+        pass
+
 
 
 # print(MovieController.show_movies_by_id(1))
